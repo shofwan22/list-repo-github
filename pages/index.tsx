@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import InputSearch from '@/components/InputSearch';
+import CardProfile from '@/components/CardProfile';
+import CardRepo from '@/components/CardRepo';
 
 export default function Home() {
   return (
@@ -9,10 +12,14 @@ export default function Home() {
       </Head>
       <div className="container mx-auto px-5 py-10 md:py-14 md:px-12">
         <p className="mb-6 text-xl font-bold">GitHub List Repository</p>
-        halo
+        <InputSearch />
+
         <div className="divider"></div>
         <div className="flex justify-center">
-          <div className="w-full md:w-8/12">halo halo</div>
+          <div className="w-full md:w-8/12">
+            <CardProfile />
+            <CardRepo />
+          </div>
         </div>
       </div>
     </>
