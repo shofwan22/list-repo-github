@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { selectUser } from '@/app/Redux/Features/user';
 import { useAppSelector } from '@/app/Redux/hooks';
 import StatProfile from './StatProfile';
+import moment from 'moment';
 
 const CardProfile = () => {
   const user = useAppSelector(selectUser);
@@ -43,7 +44,7 @@ const CardProfile = () => {
                   @{user.data.login}
                 </a>
                 <span className="text-gray-500">
-                  Joined {user.data.created_at}
+                  Joined {moment(user.data.created_at).format('D MMMM YYYY')}
                 </span>
               </div>
             </div>

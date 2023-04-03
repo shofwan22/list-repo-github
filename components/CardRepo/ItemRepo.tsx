@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import moment from 'moment';
 
 const ItemRepo = ({ ...prop }) => {
   return (
@@ -34,7 +35,7 @@ const ItemRepo = ({ ...prop }) => {
           />{' '}
           {prop.forks_count}
         </div>
-        <span>Updated {prop.pushed_at}</span>
+        <span>Updated {moment(prop.pushed_at).fromNow()}</span>
       </div>
     </div>
   );
