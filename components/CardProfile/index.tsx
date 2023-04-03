@@ -14,10 +14,10 @@ const CardProfile = () => {
             <progress className="progress my-4 w-8/12"></progress>
           </div>
         )}
-        {user.status === 'failed' ||
-          (user.status === 'idle' && (
-            <p className="text-center">No User Data</p>
-          ))}
+        {user.status === 'failed' && (
+          <p className="text-center">User Not Found</p>
+        )}
+        {user.status === 'idle' && <p className="text-center">No User Data</p>}
         {user.status === 'succeeded' && user.data?.id && (
           <>
             <div className="flex justify-around sm:justify-start sm:gap-10">
