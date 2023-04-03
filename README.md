@@ -1,4 +1,4 @@
-# Search Repository Github with Username with NextJS, Redux-toolkit, Tailwind CSS
+# Search Repository Github with Username using NextJS, Redux-toolkit, Tailwind CSS
 
 It is recommended to use node js version 18.13.0 
 
