@@ -1,19 +1,19 @@
 import Image from 'next/image';
 
-const ItemRepo = () => {
+const ItemRepo = ({ ...prop }) => {
   return (
     <div className="py-4 first:pt-0">
       <a
-        href=""
+        href={prop.html_url}
         target="_blank"
         rel="noreferrer"
         className="text-xl font-bold text-[#570DF8] hover:underline"
       >
-        name
+        {prop.name}
       </a>
-      <p className="text-sm">description</p>
+      <p className="text-sm">{prop.description}</p>
       <div className="mt-4 flex items-center gap-4 text-sm">
-        <span>bahasa</span>
+        <span>{prop.language}</span>
         <div className="flex">
           <Image
             src="/star.png"
@@ -22,7 +22,7 @@ const ItemRepo = () => {
             width={24}
             height={74}
           />{' '}
-          0
+          {prop.stargazers_count}
         </div>
         <div className="flex">
           <Image
@@ -32,9 +32,9 @@ const ItemRepo = () => {
             width={48}
             height={48}
           />{' '}
-          0
+          {prop.forks_count}
         </div>
-        <span>Updated</span>
+        <span>Updated {prop.pushed_at}</span>
       </div>
     </div>
   );

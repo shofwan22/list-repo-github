@@ -7,4 +7,5 @@ export interface User {
   public_repos: number;
   following: number;
   followers: number;
+  created_at: string;
 }
